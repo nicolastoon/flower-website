@@ -1,0 +1,37 @@
+body {
+    /* Set line height to 1.5 times the font size
+    and use the OS’s UI font as the website font */
+    font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10ch;
+    padding-right: 10ch;
+}
+
+.image-container {
+    width: 250px;
+    height: 375px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    border: solid 2px black;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .drawing {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .photo {
+        opacity: 0;
+        z-index: 1;
+    }
+}
